@@ -2,15 +2,15 @@ import sbt._
 
 object Dependencies {
   object Versions {
-    val http4s         = "0.21.6"
-    val jaeger         = "1.3.1"
-    val sttp           = "2.2.3"
+    val http4s         = "0.21.7"
+    val jaeger         = "1.3.2"
+    val sttp           = "2.2.4"
     val opentracing    = "0.33.0"
-    val opentelemetry  = "0.3.0"
+    val opentelemetry  = "0.7.0"
     val opencensus     = "0.26.0"
     val zipkin         = "2.15.0"
-    val zio            = "1.0.0-RC21-2"
-    val zioInteropCats = "2.1.4.0-RC17"
+    val zio            = "1.0.0"
+    val zioInteropCats = "2.1.4.0"
   }
 
   lazy val zio = Seq(
@@ -62,6 +62,6 @@ object Dependencies {
   lazy val opentelemetryExample = example ++ Seq(
     "io.opentelemetry" % "opentelemetry-exporters-jaeger" % Versions.opentelemetry,
     "io.opentelemetry" % "opentelemetry-sdk"              % Versions.opentelemetry,
-    "io.grpc"          % "grpc-netty-shaded"              % "1.30.2"
+    "io.grpc"          % "grpc-netty-shaded"              % "1.31.1"
   )
 }
